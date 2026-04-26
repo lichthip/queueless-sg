@@ -27,6 +27,7 @@ A full-stack platform with three layers:
 
 ## Architecture
 
+```
 ┌─────────────────┐       WebSocket / REST        ┌──────────────────────┐
 │   Next.js 14    │  ◄────────────────────────►  │  Express + Socket.IO │
 │  (TypeScript)   │                               │    (TypeScript)      │
@@ -34,12 +35,14 @@ A full-stack platform with three layers:
 │  /              │                               │  /api/centers        │
 │  /dashboard     │                               │  /api/queues         │
 └─────────────────┘                               │  /api/auth           │
-│                      │
-│  SimulationService   │
-│  PredictionService   │
-│                      │
-│  SQLite (WAL mode)   │
-└──────────────────────┘
+                                                  │                      │
+                                                  │  SimulationService   │
+                                                  │  PredictionService   │
+                                                  │                      │
+                                                  │  SQLite (WAL mode)   │
+                                                  └──────────────────────┘
+```
+
 
 The simulation service ticks every 15 seconds, modelling time-of-day inflow
 curves (morning rush 8–10 AM, afternoon dip 12–2 PM, etc.) to generate
