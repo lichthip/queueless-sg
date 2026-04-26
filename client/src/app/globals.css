@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.map-container {
+  height: 420px;
+  width: 100%;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  z-index: 0;
+}
+
+@layer components {
+  .badge-low      { @apply bg-green-100  text-green-800  border border-green-200;  }
+  .badge-moderate { @apply bg-yellow-100 text-yellow-800 border border-yellow-200; }
+  .badge-high     { @apply bg-red-100    text-red-800    border border-red-200;    }
+  .badge-closed   { @apply bg-gray-100   text-gray-500   border border-gray-200;   }
+}
