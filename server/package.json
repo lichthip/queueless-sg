@@ -1,6 +1,9 @@
 {
   "name": "queueless-sg-server",
   "version": "1.0.0",
+  "engines": {
+    "node": "20.x"
+  },
   "description": "QueueLess SG — real-time public service queue backend",
   "scripts": {
     "dev": "tsx watch src/index.ts",

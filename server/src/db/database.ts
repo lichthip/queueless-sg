@@ -59,5 +59,12 @@ export function initializeSchema() {
       ON queue_history(center_id, recorded_at);
   `);
 }
+export function seedIfEmpty() {
+  const count = (db.prepare('SELECT COUNT(*) as c FROM centers').get() as { c: number }).c;
+  if (count === 0) {
+    // dynamic require to avoid circular imports
+    require('./seed');
+  }
+}
 
 export default db;

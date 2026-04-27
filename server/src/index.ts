@@ -33,7 +33,10 @@ app.use('/api/auth', authRouter);
 app.use('/api/centers', centersRouter);
 app.use('/api/queues', queuesRouter);
 
+import { initializeSchema, seedIfEmpty } from './db/database';
+
 initializeSchema();
+seedIfEmpty();
 initializeSocket(io);
 startSimulation();
 

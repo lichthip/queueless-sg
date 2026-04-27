@@ -134,4 +134,5 @@ function seed() {
   console.log('👤  woodlands_staff / admin123 → Woodlands Polyclinic');
 }
 
+export default seed;
 seed();
