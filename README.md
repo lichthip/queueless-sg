@@ -6,6 +6,16 @@ Built to demonstrate the kind of citizen-facing tooling that replaces physical
 queue management with live data and smart redirection — the same philosophy behind
 products like Parking.sg and FormSG.
 
+
+## Live Demo
+
+Citizen view: https://queueless-sg.vercel.app  
+Staff dashboard: https://queueless-sg.vercel.app/dashboard  
+Demo login: `admin` / `admin123`
+
+> The server runs on Render's free tier and may take 30–60 seconds to wake up 
+> on first visit after a period of inactivity.
+
 ## Problem
 
 Polyclinics, ICA, HDB, CPF, and CDC service centres still expose citizens to
