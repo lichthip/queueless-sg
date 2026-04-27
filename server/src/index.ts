@@ -4,7 +4,7 @@ import { Server as SocketIOServer } from 'socket.io';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
-import { initializeSchema } from './db/database';
+import { initializeSchema, seedIfEmpty } from './db/database';
 import { initializeSocket } from './socket/queueSocket';
 import { startSimulation } from './services/simulationService';
 import authRouter from './routes/auth';
@@ -32,8 +32,6 @@ app.get('/health', (_req, res) =>
 app.use('/api/auth', authRouter);
 app.use('/api/centers', centersRouter);
 app.use('/api/queues', queuesRouter);
-
-import { initializeSchema, seedIfEmpty } from './db/database';
 
 initializeSchema();
 seedIfEmpty();
